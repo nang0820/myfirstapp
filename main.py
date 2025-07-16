@@ -50,7 +50,6 @@ anime_info = {
         "img": "https://upload.wikimedia.org/wikipedia/en/9/9d/My_Hero_Academia_Volume_1.png",
         "desc": "개성을 가진 사회에서 영웅을 꿈꾸는 소년의 성장기."
     }
-    # 필요 시 더 추가 가능
 }
 
 # --- MBTI별 애니메이션 추천 데이터 ---
@@ -60,7 +59,7 @@ mbti_anime_dict = {
     "ENTJ": ["진격의 거인", "하이큐!!", "명탐정 코난"],
     "INFJ": ["너의 이름은", "클라나드", "사이코패스"],
     "ENFP": ["스파이 패밀리", "슈타인즈 게이트", "나의 히어로 아카데미아"]
-    # 다른 유형도 원하면 계속 추가할 수 있음
+    # 필요한 만큼 MBTI 유형과 애니를 더 추가할 수 있어
 }
 
 # --- 앱 설정 ---
@@ -80,8 +79,8 @@ if selected_mbti:
         info = anime_info.get(anime)
         if info:
             st.image(info["img"], width=200)
-            st.markdown(f"**{anime}**  
-            {info['desc']}")
+            st.markdown(f"""**{anime}**
+{info['desc']}""")
             st.markdown("---")
         else:
             st.markdown(f"**{anime}** - 이미지/설명 없음")
